@@ -41,17 +41,25 @@ O sistema conta com telas funcionais integradas para testes de ponta a ponta:
 ## 📡 Como Testar (API REST / Postman)
 
 ### 1. Inserção de Dados (POST)
+
 **Cadastrar Integrante:**
+
 `POST http://localhost:8080/api/integrante`
+
 ```json
 {
   "nome": "Gustavo Canzi",
-  "franquia": "NBA",
+  "franquia": "Duxus",
   "funcao": "Desenvolvedor"
-}```
+}
+```
+
+---
 
 **Cadastrar Time (Relacionando Integrantes):**
+
 `POST http://localhost:8080/api/time`
+
 ```json
 {
   "data": "2026-02-19",
@@ -60,32 +68,71 @@ O sistema conta com telas funcionais integradas para testes de ponta a ponta:
       "integrante": { "id": 1 }
     }
   ]
-}```
+}
+```
+
+---
 
 ### 2. Processamento e Relatórios (GET)
 
-*Nota: Todos os endpoints de relatório aceitam os parâmetros opcionais de data no formato ISO (`?dataInicial=AAAA-MM-DD&dataFinal=AAAA-MM-DD`). Caso omitidos, buscam em todo o período.*
+> **Nota:** Todos os endpoints de relatório aceitam parâmetros opcionais de data no formato ISO  
+> `?dataInicial=AAAA-MM-DD&dataFinal=AAAA-MM-DD`  
+> Caso omitidos, a busca considera todo o período.
 
-* **Time de uma data específica:** `GET /api/time-da-data?data=2026-02-19`
-* **Integrante mais frequente:** `GET /api/integrante-mais-usado`
-* **Formação mais comum:** `GET /api/time-mais-comum`
-* **Função mais comum:** `GET /api/funcao-mais-comum` (Exemplo de retorno: `{"Função": "Desenvolvedor"}`)
-* **Franquia mais famosa:** `GET /api/franquia-mais-famosa`
-* **Contagem de franquias:** `GET /api/contagem-por-franquia` (Exemplo de retorno: `{"NBA": 1}`)
-* **Contagem de funções:** `GET /api/contagem-por-funcao`
+- **Time de uma data específica:**  
+  `GET http://localhost:8080/api/time-da-data?data=2026-02-19`
+
+- **Integrante mais frequente:**  
+  `GET http://localhost:8080/api/integrante-mais-usado`
+
+- **Formação mais comum:**  
+  `GET http://localhost:8080/api/time-mais-comum`
+
+- **Função mais comum:**  
+  `GET http://localhost:8080/api/funcao-mais-comum`  
+
+  Exemplo de retorno:
+  ```json
+  { "funcao": "Desenvolvedor" }
+  ```
+
+- **Franquia mais famosa:**  
+  `GET http://localhost:8080/api/franquia-mais-famosa`
+
+- **Contagem de franquias:**  
+  `GET http://localhost:8080/api/contagem-por-franquia`  
+
+  Exemplo de retorno:
+  ```json
+  { "NBA": 1 }
+  ```
+
+- **Contagem de funções:**  
+  `GET http://localhost:8080/api/contagem-por-funcao`
+
+---
 
 ## 🗄️ Acesso Direto ao Banco de Dados (H2 Console)
 
 Para visualizar as tabelas estruturadas pelo Hibernate e os dados em tempo real:
 
-* **URL:** `http://localhost:8080/h2-console`
-* **JDBC URL:** `jdbc:h2:mem:duxusdb`
-* **User:** `sa`
-* **Password:** `password`
+- **URL:**  
+  `http://localhost:8080/h2-console`
+
+- **JDBC URL:**  
+  `jdbc:h2:mem:duxusdb`
+
+- **User:**  
+  `sa`
+
+- **Password:**  
+  `password`
+
+---
 
 ## 👤 Autor
 
 **Gustavo Canzi**
 
-* **LinkedIn:** [https://www.linkedin.com/in/gustavo-canzi](https://www.linkedin.com/in/gustavo-canzi)
-* **Email:** [gustavo.canzi@gmail.com](mailto:gustavo.canzi@gmail.com)
+- **LinkedIn:** https://www.linkedin.com/in/gustavo-canzi  
+- **Email:** gustavo.canzi@gmail.com
