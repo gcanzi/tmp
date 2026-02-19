@@ -1,6 +1,6 @@
-# 🚀 Desafio Técnico Duxus - Sistema de Escalação de Times
+## 🚀 Desafio Técnico Duxus - Sistema de Escalação de Times
 
-Este projeto é uma API RESTful e uma aplicação Web (MVC) desenvolvida em **Java (Spring Boot)** para o gerenciamento e escalação de times esportivos e de eSports. O sistema permite cadastrar integrantes, montar times baseados em datas e gerar relatórios analíticos utilizando processamento em memória.
+Este projeto é uma API RESTful e uma aplicação Web desenvolvida em **Java (Spring Boot)** para o gerenciamento e escalação de times esportivos e de eSports. O sistema permite cadastrar integrantes, montar times baseados em datas e gerar relatórios analíticos utilizando processamento em memória.
 
 ## 🛠️ Tecnologias Utilizadas
 * **Linguagem:** Java 8
@@ -75,10 +75,6 @@ O sistema conta com telas funcionais integradas para testes de ponta a ponta:
 
 ### 2. Processamento e Relatórios (GET)
 
-> **Nota:** Todos os endpoints de relatório aceitam parâmetros opcionais de data no formato ISO  
-> `?dataInicial=AAAA-MM-DD&dataFinal=AAAA-MM-DD`  
-> Caso omitidos, a busca considera todo o período.
-
 - **Time de uma data específica:**  
   `GET http://localhost:8080/api/time-da-data?data=2026-02-19`
 
@@ -104,7 +100,7 @@ O sistema conta com telas funcionais integradas para testes de ponta a ponta:
 
   Exemplo de retorno:
   ```json
-  { "NBA": 1 }
+  { "Duxus": 1 }
   ```
 
 - **Contagem de funções:**  
