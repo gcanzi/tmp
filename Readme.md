@@ -48,7 +48,7 @@ O sistema conta com telas funcionais integradas para testes de ponta a ponta:
   "nome": "Gustavo Canzi",
   "franquia": "NBA",
   "funcao": "Desenvolvedor"
-}
+}```
 
 **Cadastrar Time (Relacionando Integrantes):**
 `POST http://localhost:8080/api/time`
@@ -60,7 +60,7 @@ O sistema conta com telas funcionais integradas para testes de ponta a ponta:
       "integrante": { "id": 1 }
     }
   ]
-}
+}```
 
 ### 2. Processamento e Relatórios (GET)
 
